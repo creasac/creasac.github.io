@@ -4,12 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certificates</title>
+    <script>
+        (function () {
+            try {
+                var theme = localStorage.getItem("theme");
+                if (theme === "light" || theme === "dark") {
+                    document.documentElement.dataset.theme = theme;
+                }
+            } catch (error) {
+            }
+        }());
+    </script>
     <style>
+        :root {
+            --bg: #fff;
+            --text: #111;
+            --link: #0645ad;
+            --border: #ccc;
+            --cell-border: #ddd;
+            --control-bg: #fff;
+            --control-hover: #f5f5f5;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #111;
+                --text: #eee;
+                --link: #8ab4ff;
+                --border: #555;
+                --cell-border: #333;
+                --control-bg: #111;
+                --control-hover: #1b1b1b;
+            }
+        }
+        :root[data-theme="light"] {
+            --bg: #fff;
+            --text: #111;
+            --link: #0645ad;
+            --border: #ccc;
+            --cell-border: #ddd;
+            --control-bg: #fff;
+            --control-hover: #f5f5f5;
+        }
+        :root[data-theme="dark"] {
+            --bg: #111;
+            --text: #eee;
+            --link: #8ab4ff;
+            --border: #555;
+            --cell-border: #333;
+            --control-bg: #111;
+            --control-hover: #1b1b1b;
+        }
+        html {
+            background: var(--bg);
+            color: var(--text);
+        }
         body {
             font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
             margin: 24px;
             padding: 0;
             line-height: 1.4;
+        }
+        a {
+            color: var(--link);
         }
         h2 {
             font-size: 16px;
@@ -21,19 +79,39 @@
         }
         table {
             border-collapse: collapse;
-            border: 1px solid #ccc;
+            border: 1px solid var(--border);
             margin: 0 0 18px;
         }
         th, td {
             padding: 8px 12px;
-            border: 1px solid #ddd;
+            border: 1px solid var(--cell-border);
         }
         .bold-row {
             font-weight: bold;
         }
+        .theme-toggle {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            z-index: 1;
+            padding: 4px 8px;
+            border: 1px solid var(--border);
+            background: var(--control-bg);
+            color: var(--text);
+            font: inherit;
+            font-size: 12px;
+            line-height: 1.4;
+            cursor: pointer;
+        }
+        .theme-toggle:hover {
+            background: var(--control-hover);
+        }
     </style>
+    <script src="theme.js" defer></script>
 </head>
 <body>
+    <button class="theme-toggle" type="button" data-theme-toggle>theme</button>
+
     <h2>dipesh timsina</h2>
 
     <p class="close_gap">
