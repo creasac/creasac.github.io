@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creasac - Homepage</title>
+    <title>creasac - homepage</title>
     <script>
         (function () {
             document.documentElement.classList.add("js");
@@ -86,9 +86,6 @@
             padding: 8px 12px;
             border: 1px solid var(--cell-border);
         }
-        /* .bold-row {
-            font-weight: bold;
-        } */
         .theme-toggle {
             position: fixed;
             top: 16px;
@@ -118,14 +115,14 @@
 
     <h2>dipesh timsina</h2>
     <p class="close_gap">
-        <a href="#projects" data-view-link="projects">projects</a> &middot;
-        <a href="#certificates" data-view-link="certificates">certificates</a> &middot;
+        <span data-view-switch="projects"><a href="#projects">projects</a> &middot;</span>
+        <span data-view-switch="certificates"><a href="#certificates">certifs</a> &middot;</span>
         <a href="https://github.com/creasac">github</a> &middot;
         <a href="https://www.kaggle.com/timsinadipesh">kaggle</a> &middot;
         <a href="https://www.youtube.com/@creasacyt">youtube</a> &middot;
         <a href="https://x.com/creasac_">x/twitter</a> &middot;
         <a href="https://discordapp.com/users/1051826142258155530">discord</a> &middot;
-        <a href="mailto:timsinadipesh77@gmail.com">email</a>
+        <a href="mailto:dt@creasac.com">email</a>
     </p>
 
     <section class="active-view" data-view="projects">
@@ -134,116 +131,96 @@
         <tr>
             <th>date</th>
             <th>title</th>
-            <th>type</th>
-            <th>description</th>
+            <th>about</th>
             <th>links</th>
-            <th>notes</th>
         </tr>
-        <tr class>
+        <tr>
             <td>jul 2026</td>
             <td>ava</td> 
-            <td>web tool</td>
-            <td>in-browser text-to-speech with kyutai pocket tts. includes voice cloning and audio download</td>
+            <td>a private, in-browser text-to-speech player using kyutai's pocket tts. supports voice cloning and wav downloads.</td>
             <td>
                 <a href="https://ava.creasac.com">live</a> &middot;
                 <a href="https://github.com/creasac/ava">repo</a>
             </td>
-            <td>what do u do when u want to listen to a piece of text? u go to ava</td>
         </tr>
-        <tr class="bold-row">
+        <tr>
             <td>may 2026</td>
             <td>hobbitgrad</td>
-            <td>ml library</td>
-            <td>pure python automatic differentiation engine and neural network library</td>
+            <td>a tiny (hobbit-sized) educational autograd library written in pure python. currently under development.</td>
             <td>
                 <a href="https://pypi.org/project/hobbitgrad/">pypi</a> &middot;
                 <a href="https://github.com/creasac/hobbitgrad">repo</a>
             </td>
-            <td>for learning purposes</td>
         </tr>
         <tr>
             <td>apr 2026</td>
             <td>prof</td>
-            <td>web app</td>
-            <td>configure lesson plan, generate content and take quiz to verify understanding</td>
+            <td>an adaptive learning app that turns a goal and optional source material into lessons, quizzes, and live tutoring. built during a hackathon.</td>
             <td>
                 <a href="https://prof.creasac.workers.dev">live</a> &middot;
                 <a href="https://www.youtube.com/watch?v=EhzFgjZVULM">demo</a> &middot;
                 <a href="https://github.com/creasac/prof">repo</a> &middot;
                 <a href="https://hacks.elevenlabs.io/submissions/186d65a1-6260-4ba0-b815-a598f3ca551c">post</a>
             </td>
-            <td>personalized learning with ai tutor. (pawsed due to cost)</td>
         </tr>
-        <tr class="bold-row">
+        <tr>
             <td>mar 2026</td>
             <td>rockitt</td>
-            <td>chrome extension</td>
-            <td>"@rock is this true?" for the browser using elevenlabs voice and firecrawl search</td>
+            <td>a voice-first chrome extension for asking "@rock is this true?" on any webpage (grok meme reference). built using elevenlabs voice and firecrawl search during a hackathon.</td>
             <td>
                 <a href="https://chromewebstore.google.com/detail/hfcoajndekonknlgdjfleibamoijofkh/">live</a> &middot;
                 <a href="https://www.youtube.com/watch?v=A8D66fbJItU">demo</a> &middot;
                 <a href="https://github.com/creasac/rockitt">repo</a> &middot;
                 <a href="https://hacks.elevenlabs.io/submissions/20314e7d-9eb1-4995-b3b4-708eff001f45">post</a>
             </td>
-            <td>can access current web page content and can fetch any web data for better context</td>
         </tr>
         <tr>
             <td>mar 2026</td>
             <td>url2md</td>
-            <td>web tool</td>
-            <td>convert urls to markdown</td>
+            <td>a webpage-to-markdown tool using cloudflare browser rendering to extract content. supports editable output and a live preview.</td>
             <td>
                 <a href="https://url2md.pages.dev">live</a> &middot;
                 <a href="https://github.com/creasac/url2md">repo</a> &middot;
                 <a href="https://github.com/creasac/url2md-cli">cli</a>
             </td>
-            <td>supports live preview and editing</td>
         </tr>
-        <tr class="bold-row">
+        <tr>
             <td>mar 2026</td>
             <td>smriti</td>
-            <td>linux tool</td>
-            <td>minimal screen recorder for personal use inc. optional webcam, desktop audio and mic</td>
+            <td>a minimal x11 desktop recorder with optional webcam, microphone and desktop audio. built for my minimal recording needs.</td>
             <td>
                 <a href="https://github.com/creasac/smriti">repo</a>
             </td>
-            <td>needed something that fit my minimal recording needs</td>
         </tr>
         <tr>
             <td>mar 2026</td>
             <td>shruti</td>
-            <td>linux tool</td>
-            <td>system-wide stt; gemini api for high-quality transcription across many languages</td>
+            <td>a minimal linux speech-to-text tool using gemini for high-quality multilingual transcription. set custom hotkeys to record/send (eg: ctrl+space), hit esc to cancel. built during a hackathon.</td>
             <td>
                 <a href="https://youtu.be/UYwDzhuUQPQ">demo</a> &middot;
                 <a href="https://github.com/creasac/shruti">repo</a> &middot;
                 <a href="https://dev.to/creasac/built-shruti-a-minimal-system-wide-speech-to-text-tool-for-linux-47f2">post</a>
             </td>
-            <td>custom hotkey to record/send, esc to cancel</td>
         </tr>
-        <tr class="bold-row">
+        <tr>
             <td>feb 2026</td>
             <td>frende</td>
-            <td>web app</td>
-            <td>lets you "talk with anyone, anywhere" with an ai layer that translates every message (txt+aud)</td>
+            <td>a real-time chat app that automatically translates text and voice messages for each recipient. includes a playground for sentence alternatives, corrections, etc. built during a hackathon.</td>
             <td><a href="https://frende.vercel.app">live</a> &middot;
                 <a href="https://www.youtube.com/watch?v=aFIX1mvdTwI&t=9s">demo</a> &middot;
                 <a href="https://github.com/creasac/frende-dev">repo</a> &middot;
                 <a href="https://devpost.com/software/frende">post</a>
             </td>
-            <td>useful until we have system-wide ai available.  (pawsed due to cost)</td>
         </tr>
         <tr>
             <td>jan 2026</td>
             <td>lifeinmonths</td>
-            <td>web app</td>
-            <td>fill the grid of months with events and visualize your life, share with others</td>
+            <td>a life timeline visualizer where each month is a cell u can color, label, and share. it was inspired by <a href="https://waitbutwhy.com/2014/05/life-weeks.html">this article</a> and serves as a reminder of how short life is.</td>
             <td><a href="https://lifeinmonths.vercel.app">live</a> &middot;
                 <a href="https://www.youtube.com/watch?v=9fUk39ATIXo&t=1s">demo</a> &middot;
                 <a href="https://github.com/creasac/lifeinmonths">repo</a> &middot;
                 <a href="https://lifeinmonths.vercel.app/creasac">mine</a>
             </td>
-            <td>fun way of viewing life events, reminder of how short life is</td>
         </tr>
         </table>
     </section>
@@ -253,7 +230,7 @@
         <table>
             <tr>
                 <th>date</th>
-                <th>title</th>
+                <th>certificate</th>
                 <th>issuer</th>
                 <th>time spent (approximate)</th>
             </tr>
@@ -263,13 +240,13 @@
                 <td>University of Zürich (coursera)</td>
                 <td>3 weeks at 10 hours a week</td>
             </tr>
-            <tr class="bold-row">
+            <tr>
                 <td>Jan 10, 2025</td>
                 <td><a href="https://coursera.org/share/632d15a8092e8cc3a588527fc9cee36c">Deep Learning</a></td>
                 <td>DeepLearning.AI (coursera)</td>
                 <td>3 months at 10 hours a week</td>
             </tr>
-            <tr class="bold-row">
+            <tr>
                 <td>Dec 26, 2024</td>
                 <td><a href="https://coursera.org/share/d526c2bbdcf592c46728c0be9bdc3246">Accelerated Computer Science Fundamentals</a></td>
                 <td>University of Illinois Urbana-Champaign (coursera)</td>
@@ -281,13 +258,13 @@
                 <td>Codio (coursera)</td>
                 <td>4 weeks at 10 hours a week</td>
             </tr>
-            <tr class="bold-row">
+            <tr>
                 <td>Aug 29, 2024</td>
                 <td><a href="https://coursera.org/share/204531e385c50a49f821b47ea51f4e2b">C Programming with Linux</a></td>
                 <td>Institut Mines-Télécom & Dartmouth College (coursera)</td>
                 <td>2 months at 10 hours a week</td>
             </tr>
-            <tr class="bold-row">
+            <tr>
                 <td>Jul 12, 2024</td>
                 <td><a href="https://coursera.org/share/3ad6fe5a022023cad6f29e0116e2bc9b">From Nand to Tetris</a></td>
                 <td>Hebrew University of Jerusalem (coursera)</td>
@@ -299,13 +276,13 @@
                 <td>Stanford University (coursera)</td>
                 <td>2 weeks at 10 hours a week</td>
             </tr>
-            <tr class="bold-row">
+            <tr>
                 <td>May 18, 2024</td>
                 <td><a href="https://coursera.org/share/c6312e6c1ece568bc336d7b0ed98c8a7">Machine Learning</a></td>
                 <td>Stanford University & DeepLearning.AI (coursera)</td>
                 <td>2 months at 10 hours a week</td>
             </tr>
-            <tr class="bold-row">
+            <tr>
                 <td>Feb 24, 2024</td>
                 <td><a href="https://coursera.org/share/4c72ab20d2b2abe898c4d1ca3e85a241">Mathematics for Machine Learning and Data Science</a></td>
                 <td>DeepLearning.AI (coursera)</td>
@@ -317,13 +294,13 @@
                 <td>Cisco Networking Academy</td>
                 <td>7 weeks at 10 hours a week</td>
             </tr>
-            <tr class="bold-row">
+            <tr>
                 <td>Aug 28, 2023</td>
                 <td><a href="https://coursera.org/share/d5e69bac4a2be00237bb6cb69e3897bf">Core Java</a></td>
                 <td>LearnQuest (coursera)</td>
                 <td>2 months at 10 hours a week</td>
             </tr>
-            <tr class="bold-row">
+            <tr>
                 <td>Aug 21, 2023</td>
                 <td><a href="https://coursera.org/share/abc9e48126a70b0f7f11c1d0de5cccbb">Étudier en France: French Intermediate course B1-B2</a></td>
                 <td>École Polytechnique (coursera)</td>
@@ -335,13 +312,13 @@
                 <td>AWS Academy</td>
                 <td>2 weeks at 10 hours a week</td>
             </tr>
-            <tr class="bold-row">
+            <tr>
                 <td>Sep 12, 2022</td>
                 <td><a href="https://drive.google.com/file/d/124qPw9OoJ26R4PNTx1wd91HVh4HaTQHC/view">Français B1.1 (French Language)</a></td>
                 <td>Alliance Française de Katmandou</td>
                 <td>1 year at 8 hours a week</td>
             </tr>
-            <tr class="bold-row">
+            <tr>
                 <td>Aug 10, 2022</td>
                 <td><a href="https://drive.google.com/file/d/1zjWi_UGqkVSPky_HVifHElUkT7HzQy-I/view">Goethe-Zerifikat B2 (German Language)</a></td>
                 <td>Goethe-Institut</td>

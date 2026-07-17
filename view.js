@@ -1,7 +1,7 @@
 (function () {
     var viewNames = ["projects", "certificates"];
     var views = document.querySelectorAll("[data-view]");
-    var links = document.querySelectorAll("[data-view-link]");
+    var switches = document.querySelectorAll("[data-view-switch]");
 
     function getViewName() {
         var name = window.location.hash.slice(1);
@@ -17,17 +17,13 @@
             view.hidden = !isActive;
         });
 
-        links.forEach(function (link) {
-            if (link.dataset.viewLink === activeView) {
-                link.setAttribute("aria-current", "page");
-            } else {
-                link.removeAttribute("aria-current");
-            }
+        switches.forEach(function (viewSwitch) {
+            viewSwitch.hidden = viewSwitch.dataset.viewSwitch === activeView;
         });
 
         document.title = activeView === "certificates"
-            ? "Creasac - Certificates"
-            : "Creasac - Projects";
+            ? "creasac - certifs"
+            : "creasac - projects";
     }
 
     window.addEventListener("hashchange", showView);
