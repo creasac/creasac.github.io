@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>creasac - notes</title>
+    <script>
+        (function () {
+            try {
+                var theme = localStorage.getItem("theme");
+                if (theme === "light" || theme === "dark") {
+                    document.documentElement.dataset.theme = theme;
+                }
+            } catch (error) {
+            }
+        }());
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <script src="../theme.js" defer></script>
+</head>
+<body>
+    <button class="theme-toggle" type="button" data-theme-toggle>theme</button>
+    <nav aria-label="Site"><a href="../index.html">home</a></nav>
+
+    <main>
+        <br>
+        <h1>notes</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">date</th>
+                    <th scope="col">note</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><time datetime="2026-09-22">sep 22, 2026</time></td>
+                    <td><a href="no-ragrets.html">no ragrets</a></td>
+                </tr>
+                <tr>
+                    <td><time datetime="2026-09-22">sep 22, 2026</time></td>
+                    <td><a href="noble-animals.html">noble animals</a></td>
+                </tr>
+                <tr>
+                    <td><time datetime="2026-09-22">sep 22, 2026</time></td>
+                    <td><a href="current-thing.html">current thing</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>
